@@ -2,6 +2,14 @@
 // member of the array, and returns a new array with that member removed.
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
+let people = ['Cadence', 'Ordel', 'Marion']
+
+function remove (array, arrayItem){
+    return array.filter((item) => item !== arrayItem)
+}
+console.log(remove(people, 'Marion'))
+
+        
 //
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
@@ -11,12 +19,37 @@
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
-
+function sum (array) {
+    if (array.length === 0) {
+        return 0
+    }
+    return array.reduce((num, total) => total += num)
+}
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+function average (array) {
+    if (array.length === 0) {
+        return 
+    }
+    return sum(array) / array.length
+}
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+function minimum (array) {
+    //pick the first element in the array
+        let min = array[0]
+        //loop through each element of the array starting with the first and ending with the last
+        for (let num of array) {
+            //check the element against your minimum value
+            if (num < min) {
+                console.log(min)
+                min = num
+                console.log(min)
+            }
+    }
+    return min
+}
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
@@ -41,7 +74,9 @@
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
-
+function selectionSort (){
+    
+}
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
 //
